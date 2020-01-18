@@ -19,7 +19,7 @@ def parse_dns(dns_ra)
     if a[re_array[0]] == nil
       a[re_array[0]] = {}
     end
-    a[re_array[0]][re_array[1]] = re_array[2]
+    a[re_array[0]][re_array[1]] = re_array[2]#creating hash
   end
 
   return a
