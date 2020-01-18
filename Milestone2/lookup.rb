@@ -15,11 +15,11 @@ def parse_dns(dns_ra)
   a = {}
   dns_raw.each do |record| #split the each line into 3 columns
     rec_array = record.split(",")
-    re_array = rec_array.map { |r| r.strip }
+    re_array = rec_array.map { |r| r.strip } #remove white spaces from each column
     if a[re_array[0]] == nil
       a[re_array[0]] = {}
     end
-    a[re_array[0]][re_array[1]] = re_array[2]#creating hash
+    a[re_array[0]][re_array[1]] = re_array[2] #creating hash
   end
 
   return a
